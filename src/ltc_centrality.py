@@ -18,7 +18,7 @@ def generate_graph():
 
     # Create second directed graph
     G2 = nx.DiGraph()
-    for idx,row in data.iterrows():
+    for idx,row in  df_retweets.iterrows():
         G2.add_edge(row['source'], row['target'], weight= row['weight'])    
 
     return G1, G2
